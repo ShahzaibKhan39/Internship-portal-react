@@ -8,7 +8,7 @@ import Login from './pages/Login';
 import Home from './pages/Home'; 
 import InternshipPage from './pages/InternshipPage'; 
 import ApplyForm from './pages/ApplyForm';
-import AdminDashboard from './pages/AdminDashboard';
+import AdminDashboard from './pages/AdminDashboard'; 
 import AdminApplicants from './pages/AdminApplicants'; 
 
 function App() {
