@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import { Toaster } from 'react-hot-toast';
 import CreateIntern from './pages/CreateIntern'; 
-import EditInterns from './pages/EditInterns';
+import EditIntern from './pages/EditIntern';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Home from './pages/Home'; 
@@ -25,7 +25,7 @@ function App() {
         <Route path='/admin-dashboard' element={<AdminDashboard />} />
         <Route path='/admin/applicants' element={<AdminApplicants />} /> 
         <Route path='/CreateUser' element={<CreateIntern />} />
-        <Route path="/internships/:id" element={<EditInterns />} />
+        <Route path="/internships/:id" element={<EditIntern />} />
       </Routes>
       <Toaster position="top-center" reverseOrder={false} />
     </BrowserRouter>
