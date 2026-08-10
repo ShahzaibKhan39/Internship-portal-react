@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import { Toaster } from 'react-hot-toast';
-import CreateIntern from './pages/createIntern'; 
+import CreateIntern from './pages/CreateIntern'; 
 import EditInterns from './pages/EditInterns';
 import Register from './pages/Register';
 import Login from './pages/Login';
