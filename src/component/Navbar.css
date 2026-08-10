@@ -1,11 +1,11 @@
-
 .navbar-bg-wrapper {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://unsplash.com"); 
   background-size: cover;
   background-position: center;
   padding: 20px 0 20px 0;
+  width: 100%;
+  box-sizing: border-box;
 }
-
 
 .custom-glass-navbar {
   font-family: sans-serif;
@@ -17,12 +17,10 @@
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
-
 .brand-link-container {
   cursor: pointer !important;
   user-select: none;
 }
-
 
 .brand-primary-text {
   color: #78774d; 
@@ -42,7 +40,6 @@
   display: inline-block;
 }
 
-
 .navbar-action-link-btn {
   font-size: 1.05rem;
   transition: all 0.25s ease-in-out;
@@ -53,7 +50,6 @@
   background: none;
 }
 
-
 .internships-nav-btn {
   color: #212113; 
   background-color: rgba(33, 33, 19, 0.08);
@@ -63,7 +59,6 @@
   color: #ffffff;
   background-color: #212113;
 }
-
 
 .navbar-search-form {
   max-width: 400px; 
@@ -84,7 +79,6 @@
   font-size: 0.95rem; 
   border-radius: 0 10px 10px 0 !important;
 }
-
 
 .custom-logout-btn {
   background-color: #dc3545 !important;

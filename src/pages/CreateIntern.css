@@ -6,16 +6,18 @@
   justify-content: center;
   padding: 30px 20px;
   font-family: Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 .create-intern-card {
   background-color: #ffffff;
   border-radius: 28px;
   width: 100%;
-  max-width: 620px;
-  padding: 50px 50px;
+  max-width: 550px;
+  padding: 40px 35px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
   position: relative;
+  box-sizing: border-box;
 }
 
 .close-btn {
@@ -102,4 +104,10 @@
 .submit-btn:hover {
   background-color: #1a252f;
   transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+  .create-intern-card {
+    padding: 30px 20px;
+  }
 }
