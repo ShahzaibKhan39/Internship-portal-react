@@ -1,0 +1,105 @@
+.create-intern-container {
+  background-color: #22252a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.create-intern-card {
+  background-color: #ffffff;
+  border-radius: 28px;
+  width: 100%;
+  max-width: 620px;
+  padding: 50px 50px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #333333;
+  cursor: pointer;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: #000000;
+}
+
+.illustration-wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 28px;
+}
+
+.salary-group {
+  margin-bottom: 38px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  color: #1a252f;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.form-input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #2c3e50;
+  border-radius: 0;
+  padding: 8px 0;
+  font-size: 16px;
+  outline: none;
+  background-color: transparent;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-bottom-color: #2c3e50;
+}
+
+.form-textarea {
+  resize: none;
+  font-family: inherit;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
+.submit-btn {
+  background-color: #2c3e50;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 16px 60px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(44, 62, 80, 0.35);
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #1a252f;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,112 @@
+
+.section-title {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #212529;
+  letter-spacing: -0.5px;
+}
+
+
+.cards-grid-row {
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2.5rem;
+  width: 100%;
+}
+
+
+.custom-job-card {
+  background-color: #ffffff !important;
+  border: none !important;
+  border-radius: 16px !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
+}
+
+
+.custom-job-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+.card-body-layout {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem !important; 
+  height: 100%;
+}
+
+
+.job-title {
+  font-weight: 700 !important;
+  margin-bottom: 0.5rem !important;
+  color: #212529 !important;
+  font-size: 1.6rem !important; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.job-salary {
+  margin-bottom: 1.5rem !important;
+  color: #198754 !important;
+  font-size: 1.2rem !important; 
+  font-weight: 700 !important;
+}
+
+.job-description {
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  color: #6c757d !important;
+  margin-bottom: 1.5rem !important;
+  flex-grow: 1 !important;
+}
+
+.job-requirements {
+  font-size: 1rem !important;
+  color: #6c757d !important;
+  border-top: 1px solid #dee2e6 !important;
+  padding-top: 1.25rem !important;
+  margin-top: auto !important;
+}
+
+.field-label {
+  color: #212529 !important;
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 1.15rem; 
+}
+
+
+.btn-apply {
+  width: 100%;
+  margin-top: 1.5rem;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  padding-top: 0.85rem !important;
+  padding-bottom: 0.85rem !important;
+  background-color: #132114 !important;
+  border-radius: 10px !important;
+  font-size: 1.05rem !important;
+  border: none !important;
+  transition: opacity 0.2s ease;
+}
+
+.btn-apply:hover {
+  opacity: 0.9;
+}
+
+
+@media (max-width: 480px) {
+  .cards-grid-row {
+    grid-template-columns: 1fr;
+  }
+  .card-body-layout {
+    padding: 1.5rem !important;
+  }
+}

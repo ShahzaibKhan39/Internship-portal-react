@@ -1,0 +1,101 @@
+
+.navbar-bg-wrapper {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://unsplash.com"); 
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0 20px 0;
+}
+
+
+.custom-glass-navbar {
+  font-family: sans-serif;
+  font-size: 1.05rem; 
+  border-radius: 10px; 
+  background-color: rgba(255, 255, 255, 0.75) !important; 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); 
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.brand-link-container {
+  cursor: pointer !important;
+  user-select: none;
+}
+
+
+.brand-primary-text {
+  color: #78774d; 
+  font-size: 1.75rem; 
+  letter-spacing: -0.5px;
+}
+
+.brand-secondary-text {
+  color: #212113;
+}
+
+.brand-arrow-icon {
+  color: #212113; 
+  font-size: 1.3rem; 
+  font-weight: bold; 
+  transform: rotate(45deg); 
+  display: inline-block;
+}
+
+
+.navbar-action-link-btn {
+  font-size: 1.05rem;
+  transition: all 0.25s ease-in-out;
+  border-radius: 6px; 
+  padding: 6px 16px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+
+.internships-nav-btn {
+  color: #212113; 
+  background-color: rgba(33, 33, 19, 0.08);
+}
+
+.internships-nav-btn:hover {
+  color: #ffffff;
+  background-color: #212113;
+}
+
+
+.navbar-search-form {
+  max-width: 400px; 
+  width: 100%;
+}
+
+.custom-search-input {
+  border-radius: 10px 0 0 10px !important; 
+  color: #6c757d; 
+  font-size: 0.95rem;
+  background-color: rgba(248, 249, 250, 0.8) !important;
+}
+
+.custom-search-append-btn {
+  background-color: #ced4da !important; 
+  border-color: #ced4da !important; 
+  color: #495057 !important; 
+  font-size: 0.95rem; 
+  border-radius: 0 10px 10px 0 !important;
+}
+
+
+.custom-logout-btn {
+  background-color: #dc3545 !important;
+  color: #ffffff !important;
+  border-radius: 10px !important; 
+  font-size: 0.95rem !important;
+  border: 1px solid #dc3545 !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.custom-logout-btn:hover {
+  background-color: #ffffff !important;
+  color: #dc3545 !important;
+}

@@ -1,0 +1,77 @@
+
+.custom-footer {
+  background-color: #080c0a;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+
+.brand-title {
+  letter-spacing: 2px;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.main-heading {
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 420px;
+}
+
+
+.footer-link-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.footer-link-list li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-link-list a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-link-list a:hover {
+  color: #ffffff;
+}
+
+
+.social-icons-column a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.social-icons-column a:hover {
+  color: #ffffff;
+}
+
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.12);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-copyright {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.privacy-link {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.privacy-link:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
