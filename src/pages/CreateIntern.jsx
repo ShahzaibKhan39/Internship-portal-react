@@ -22,7 +22,7 @@ function CreateIntern() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/createJob', intern);
+      const res = await axios.post('https://internship-portal-node.onrender.com/createJob', intern);
       console.log(res);
       toast.success('created');
 

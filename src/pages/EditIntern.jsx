@@ -24,7 +24,7 @@ function EditIntern() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const res = await axios.patch(`http://localhost:5000/internships/${params.id}`, intern);
+      const res = await axios.patch(`https://internship-portal-node.onrender.com/internships/${params.id}`, intern);
       console.log(res);
       toast.success('Updated');
       setintern({

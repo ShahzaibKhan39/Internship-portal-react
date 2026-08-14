@@ -26,7 +26,7 @@ function Login() {
 
     try {
       const endpoint = authData.role === 'admin' ? 'login/admin' : 'login/user';
-      const res = await axios.post(`http://localhost:5000/${endpoint}`, {
+      const res = await axios.post(`https://internship-portal-node.onrender.com/${endpoint}`, {
         email: authData.email,
         password: authData.password
       });

@@ -21,7 +21,7 @@ function Register() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/register', authData);
+      const res = await axios.post('https://internship-portal-node.onrender.com/register', authData);
       console.log(res);
 
       setauthData({

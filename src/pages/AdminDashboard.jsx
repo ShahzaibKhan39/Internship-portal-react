@@ -12,7 +12,7 @@ function AdminDashboard() {
 
   async function fetchUsers() { 
     try {
-      const res = await axios.get("http://localhost:5000/internships"); 
+      const res = await axios.get("https://internship-portal-node.onrender.com/internships"); 
       setInterns(res.data);
     } catch (error) {
       console.error("Error fetching internships:", error);
@@ -26,7 +26,7 @@ function AdminDashboard() {
 
   async function deleteIntern(id) { 
     try {
-      await axios.delete("http://localhost:5000/internships/" + id); 
+      await axios.delete("https://internship-portal-node.onrender.com/internships/" + id); 
       const singleintern = interns.filter((mereinterns) => mereinterns._id !== id); 
       setInterns(singleintern); 
       toast.success("Internship deleted");
@@ -38,7 +38,7 @@ function AdminDashboard() {
 
   async function handleLogout() {
     try {
-      await axios.post('http://localhost:5000/logout', {}, { withCredentials: true });
+      await axios.post('https://internship-portal-node.onrender.com/logout', {}, { withCredentials: true });
       localStorage.removeItem('token');
       toast.success("Admin logged out");
       navigate('/');

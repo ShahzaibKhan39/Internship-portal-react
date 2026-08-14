@@ -11,7 +11,7 @@ function AdminApplicants() {
 
   async function fetchApplicants() {
     try {
-      const res = await axios.get("http://localhost:5000/applications");
+      const res = await axios.get("https://internship-portal-node.onrender.com/applications");
       setApplicants(res.data);
     } catch (error) {
       console.error("Error querying candidate profiles:", error);
