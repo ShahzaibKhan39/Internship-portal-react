@@ -42,7 +42,7 @@ function EditIntern() {
 
   async function getUserById() {
     try {
-      const res = await axios.get(`http://localhost:5000/internships/${params.id}`);
+      const res = await axios.get(`https://internship-portal-node.onrender.com/internships/${params.id}`);
       console.log(res.data);
       setintern(res.data);
     } catch (error) {
