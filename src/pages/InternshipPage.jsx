@@ -13,7 +13,7 @@ function InternshipPage() {
 
   async function handleLogout() {
     try {
-      await axios.post('https://internship-portal-node.onrender.com/logout', {}, { withCredentials: true });
+      await axios.post(`${process.env.VITE_APP_BACKEND_URL}/logout`, {}, { withCredentials: true });
       localStorage.removeItem('token');
       toast.success("Logged out successfully");
       navigate('/');

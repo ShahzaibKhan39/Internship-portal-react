@@ -11,8 +11,7 @@ function AdminApplicants() {
 
   async function fetchApplicants() {
     try {
-      const res = await axios.get("https://internship-portal-node.onrender.com/applications");
-      setApplicants(res.data);
+const res = await axios.get(`${process.env.VITE_APP_BACKEND_URL}/applications`);      setApplicants(res.data);
     } catch (error) {
       console.error("Error querying candidate profiles:", error);
       toast.error("Failed to load candidate applications");

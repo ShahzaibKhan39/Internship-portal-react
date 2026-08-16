@@ -24,7 +24,7 @@ function EditIntern() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const res = await axios.patch(`https://internship-portal-node.onrender.com/internships/${params.id}`, intern);
+      const res = await axios.patch(`${process.env.VITE_APP_BACKEND_URL}/internships/${params.id}`, intern);
       console.log(res);
       toast.success('Updated');
       setintern({
@@ -42,7 +42,7 @@ function EditIntern() {
 
   async function getUserById() {
     try {
-      const res = await axios.get(`https://internship-portal-node.onrender.com/internships/${params.id}`);
+      const res = await axios.get(`${process.env.VITE_APP_BACKEND_URL}/internships/${params.id}`);
       console.log(res.data);
       setintern(res.data);
     } catch (error) {

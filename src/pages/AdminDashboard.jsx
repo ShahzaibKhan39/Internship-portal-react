@@ -12,7 +12,7 @@ function AdminDashboard() {
 
   async function fetchUsers() { 
     try {
-      const res = await axios.get("https://internship-portal-node.onrender.com/internships"); 
+      const res = await axios.get(`${process.env.VITE_APP_BACKEND_URL}/internships`); 
       setInterns(res.data);
     } catch (error) {
       console.error("Error fetching internships:", error);
@@ -26,7 +26,7 @@ function AdminDashboard() {
 
   async function deleteIntern(id) { 
     try {
-      await axios.delete("https://internship-portal-node.onrender.com/internships/" + id); 
+      await axios.delete(`${process.env.VITE_APP_BACKEND_URL}/internships/` + id); 
       const singleintern = interns.filter((mereinterns) => mereinterns._id !== id); 
       setInterns(singleintern); 
       toast.success("Internship deleted");
@@ -38,7 +38,7 @@ function AdminDashboard() {
 
   async function handleLogout() {
     try {
-      await axios.post('https://internship-portal-node.onrender.com/logout', {}, { withCredentials: true });
+      await axios.post( `${process.env.VITE_APP_BACKEND_URL}/logout`, {}, { withCredentials: true });
       localStorage.removeItem('token');
       toast.success("Admin logged out");
       navigate('/');

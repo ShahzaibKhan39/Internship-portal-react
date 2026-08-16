@@ -25,7 +25,7 @@ function ApplyForm() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const response = await axios.post('https://internship-portal-node.onrender.com/applications', formData);
+      const response = await axios.post(`${process.env.VITE_APP_BACKEND_URL}/applications`, formData);
 
       if (response.data.success) {
         toast.success('Application Submitted successfully');
