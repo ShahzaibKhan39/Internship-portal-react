@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../config/api';
 import './Register.css';
 
 function Register() {
@@ -21,7 +22,7 @@ function Register() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const res = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/register`, authData);
+      const res = await axios.post(`${API_BASE_URL}/register`, authData);
       console.log(res);
 
       setauthData({

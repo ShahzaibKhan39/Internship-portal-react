@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { API_BASE_URL } from '../config/api';
 import './EditIntern.css';
 
 function EditIntern() {
@@ -24,7 +25,7 @@ function EditIntern() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const res = await axios.patch(`${import.meta.env.VITE_APP_BACKEND_URL}/internships/${params.id}`, intern);
+      const res = await axios.patch(`${API_BASE_URL}/internships/${params.id}`, intern);
       console.log(res);
       toast.success('Updated');
       setintern({
@@ -42,7 +43,7 @@ function EditIntern() {
 
   async function getUserById() {
     try {
-      const res = await axios.get(`${import.meta.env.VITE_APP_BACKEND_URL}/internships/${params.id}`);
+      const res = await axios.get(`${API_BASE_URL}/internships/${params.id}`);
       console.log(res.data);
       setintern(res.data);
     } catch (error) {

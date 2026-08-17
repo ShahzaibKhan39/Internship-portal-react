@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import { API_BASE_URL } from '../config/api';
 import './ApplyForm.css';
 
 function ApplyForm() {
@@ -25,7 +26,7 @@ function ApplyForm() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const response = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/applications`, formData);
+      const response = await axios.post(`${API_BASE_URL}/applications`, formData);
 
       if (response.data.success) {
         toast.success('Application Submitted successfully');

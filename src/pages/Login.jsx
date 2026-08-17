@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../config/api';
 import './Login.css';
 
 function Login() {
@@ -25,7 +26,7 @@ function Login() {
 
     try {
       const endpoint = authData.role === 'admin' ? 'login/admin' : 'login/user';
-      const res = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/${endpoint}`, {
+      const res = await axios.post(`${API_BASE_URL}/${endpoint}`, {
         email: authData.email,
         password: authData.password
       });

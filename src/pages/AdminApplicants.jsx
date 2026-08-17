@@ -3,6 +3,7 @@ import { Button, Container, Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { API_BASE_URL } from '../config/api';
 
 function AdminApplicants() {
   const [applicants, setApplicants] = useState([]);
@@ -11,7 +12,7 @@ function AdminApplicants() {
 
   async function fetchApplicants() {
     try {
-      const res = await axios.get(`${import.meta.env.VITE_APP_BACKEND_URL}/applications`);
+      const res = await axios.get(`${API_BASE_URL}/applications`);
       setApplicants(res.data);
     } catch (error) {
       console.error("Error querying candidate profiles:", error);

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { API_BASE_URL } from '../config/api';
 import './CreateIntern.css';
 
 function CreateIntern() {
@@ -22,7 +23,7 @@ function CreateIntern() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const res = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/createJob`, intern);
+      const res = await axios.post(`${API_BASE_URL}/createJob`, intern);
       console.log(res);
       toast.success('created');
 

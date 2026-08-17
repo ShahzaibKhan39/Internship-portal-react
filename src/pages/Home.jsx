@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { API_BASE_URL } from '../config/api';
 
 import Navbar from '../component/Navbar';
 import Hero from '../component/Hero';
@@ -21,7 +22,7 @@ function Home() {
 
   async function handleLogout() {
     try {
-      await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/logout`, {}, { withCredentials: true });
+      await axios.post(`${API_BASE_URL}/logout`, {}, { withCredentials: true });
       localStorage.removeItem('token');
       toast.success("Logged out successfully");
       navigate('/');

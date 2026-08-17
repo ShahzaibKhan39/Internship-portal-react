@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Card from 'react-bootstrap/Card'; 
 import { Pencil, XLg } from 'react-bootstrap-icons';
 import toast from "react-hot-toast";
+import { API_BASE_URL } from '../config/api';
 
 function AdminDashboard() { 
   const [interns, setInterns] = useState([]); 
@@ -12,7 +13,7 @@ function AdminDashboard() {
 
   async function fetchUsers() { 
     try {
-      const res = await axios.get(`${import.meta.env.VITE_APP_BACKEND_URL}/internships`); 
+      const res = await axios.get(`${API_BASE_URL}/internships`); 
       setInterns(res.data);
     } catch (error) {
       console.error("Error fetching internships:", error);
@@ -26,7 +27,7 @@ function AdminDashboard() {
 
   async function deleteIntern(id) { 
     try {
-      await axios.delete(`${import.meta.env.VITE_APP_BACKEND_URL}/internships/` + id); 
+      await axios.delete(`${API_BASE_URL}/internships/` + id); 
       const singleintern = interns.filter((mereinterns) => mereinterns._id !== id); 
       setInterns(singleintern); 
       toast.success("Internship deleted");
@@ -38,7 +39,7 @@ function AdminDashboard() {
 
   async function handleLogout() {
     try {
-      await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/logout`, {}, { withCredentials: true });
+      await axios.post(`${API_BASE_URL}/logout`, {}, { withCredentials: true });
       localStorage.removeItem('token');
       toast.success("Admin logged out");
       navigate('/');
