@@ -25,7 +25,7 @@ function ApplyForm() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const response = await axios.post(`${process.env.VITE_APP_BACKEND_URL}/applications`, formData);
+      const response = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/applications`, formData);
 
       if (response.data.success) {
         toast.success('Application Submitted successfully');
@@ -40,7 +40,6 @@ function ApplyForm() {
   return (
     <div className="apply-container">
       <div className="apply-card">
-        
         <button
           type="button"
           onClick={() => navigate(-1)}
@@ -50,7 +49,6 @@ function ApplyForm() {
           ✕
         </button>
 
-        
         <div className="illustration-wrapper">
           <svg
             width="100%"
@@ -62,11 +60,8 @@ function ApplyForm() {
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            
             <circle cx="150" cy="20" r="8" />
             <path d="M150 8v4 M150 28v4 M138 20h-4 M166 20h-4 M141.5 11.5l-2.8-2.8 M161.3 31.3l-2.8-2.8 M141.5 28.5l-2.8 2.8 M161.3 8.7l-2.8 2.8" />
-            
-            
             <path d="M10 70h280" />
             <path d="M40 70V45h30v25 M80 70V30h30v40 M125 70V10h10v60 M150 70V40h20v30 M180 70V25h35v45 M225 70V35h30v35" />
             <path d="M175 40l15-10 15 10" />
@@ -74,9 +69,7 @@ function ApplyForm() {
           </svg>
         </div>
 
-        
         <form onSubmit={submitHandler}>
-          
           <div className="form-group">
             <label htmlFor="jobRole" className="form-label">
               SELECTED JOB ROLE
@@ -93,7 +86,6 @@ function ApplyForm() {
             />
           </div>
 
-          
           <div className="form-group">
             <label htmlFor="qualification" className="form-label">
               HIGHEST QUALIFICATION
@@ -110,7 +102,6 @@ function ApplyForm() {
             />
           </div>
 
-          
           <div className="form-group">
             <label htmlFor="linkedin" className="form-label">
               LINKEDIN PROFILE URL
@@ -127,7 +118,6 @@ function ApplyForm() {
             />
           </div>
 
-          
           <div className="form-group">
             <label htmlFor="github" className="form-label">
               GITHUB PROFILE URL
@@ -144,7 +134,6 @@ function ApplyForm() {
             />
           </div>
 
-          
           <div className="form-group cv-group">
             <label htmlFor="cvLink" className="form-label">
               CV / RESUME PDF LINK
@@ -161,7 +150,6 @@ function ApplyForm() {
             />
           </div>
 
-          
           <div className="button-wrapper">
             <button type="submit" className="submit-btn">
               SUBMIT

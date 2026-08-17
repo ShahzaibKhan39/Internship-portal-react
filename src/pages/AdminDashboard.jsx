@@ -12,7 +12,7 @@ function AdminDashboard() {
 
   async function fetchUsers() { 
     try {
-      const res = await axios.get(`${process.env.VITE_APP_BACKEND_URL}/internships`); 
+      const res = await axios.get(`${import.meta.env.VITE_APP_BACKEND_URL}/internships`); 
       setInterns(res.data);
     } catch (error) {
       console.error("Error fetching internships:", error);
@@ -26,7 +26,7 @@ function AdminDashboard() {
 
   async function deleteIntern(id) { 
     try {
-      await axios.delete(`${process.env.VITE_APP_BACKEND_URL}/internships/` + id); 
+      await axios.delete(`${import.meta.env.VITE_APP_BACKEND_URL}/internships/` + id); 
       const singleintern = interns.filter((mereinterns) => mereinterns._id !== id); 
       setInterns(singleintern); 
       toast.success("Internship deleted");
@@ -38,7 +38,7 @@ function AdminDashboard() {
 
   async function handleLogout() {
     try {
-      await axios.post( `${process.env.VITE_APP_BACKEND_URL}/logout`, {}, { withCredentials: true });
+      await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/logout`, {}, { withCredentials: true });
       localStorage.removeItem('token');
       toast.success("Admin logged out");
       navigate('/');
@@ -50,13 +50,9 @@ function AdminDashboard() {
 
   return ( 
     <div className="container py-3"> 
-      
       <div className="d-flex flex-row justify-content-between align-items-center border-bottom pb-3 my-4"> 
         <h1 className="m-0 fw-bold">Admin Dashboard</h1> 
-        
-        
         <div className="d-flex align-items-center gap-2">
-          
           <Button 
             variant="warning" 
             className="fw-bold text-dark px-3 py-2 shadow-sm" 
@@ -65,7 +61,6 @@ function AdminDashboard() {
             Applicants 
           </Button> 
 
-          
           <Button 
             variant="primary" 
             className="fw-bold px-3 py-2 shadow-sm" 
@@ -74,7 +69,6 @@ function AdminDashboard() {
             Create 
           </Button> 
 
-          
           <Button 
             variant="danger" 
             className="fw-bold px-3 py-2 shadow-sm" 
@@ -85,7 +79,6 @@ function AdminDashboard() {
         </div>
       </div> 
 
-      
       <div className="interns d-flex flex-wrap gap-4 mt-2"> 
         {interns.length === 0 ? (
           <p className="text-muted fs-5 w-100 text-center my-5">No internships found. Click create to add one!</p>

@@ -22,7 +22,7 @@ function CreateIntern() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const res = await axios.post(`${process.env.VITE_APP_BACKEND_URL}/createJob`, intern);
+      const res = await axios.post(`${import.meta.env.VITE_APP_BACKEND_URL}/createJob`, intern);
       console.log(res);
       toast.success('created');
 
@@ -43,7 +43,6 @@ function CreateIntern() {
   return (
     <div className="create-intern-container">
       <div className="create-intern-card">
-        
         <button
           type="button"
           onClick={() => navigate('/AdminDashboard')}
@@ -53,7 +52,6 @@ function CreateIntern() {
           ✕
         </button>
 
-        
         <div className="illustration-wrapper">
           <svg
             width="100%"
@@ -65,11 +63,8 @@ function CreateIntern() {
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            
             <circle cx="150" cy="20" r="8" />
             <path d="M150 8v4 M150 28v4 M138 20h-4 M166 20h-4 M141.5 11.5l-2.8-2.8 M161.3 31.3l-2.8-2.8 M141.5 28.5l-2.8 2.8 M161.3 8.7l-2.8 2.8" />
-
-            
             <path d="M10 70h280" />
             <path d="M40 70V45h30v25 M80 70V30h30v40 M125 70V10h10v60 M150 70V40h20v30 M180 70V25h35v45 M225 70V35h30v35" />
             <path d="M175 40l15-10 15 10" />
@@ -77,9 +72,7 @@ function CreateIntern() {
           </svg>
         </div>
 
-        
         <form onSubmit={submitHandler}>
-          
           <div className="form-group">
             <label htmlFor="titleName" className="form-label">
               TITLE NAME
@@ -96,7 +89,6 @@ function CreateIntern() {
             />
           </div>
 
-          
           <div className="form-group">
             <label htmlFor="jobDescription" className="form-label">
               JOB DESCRIPTION
@@ -113,7 +105,6 @@ function CreateIntern() {
             />
           </div>
 
-          
           <div className="form-group">
             <label htmlFor="requireMent" className="form-label">
               REQUIREMENT
@@ -130,7 +121,6 @@ function CreateIntern() {
             />
           </div>
 
-        
           <div className="form-group salary-group">
             <label htmlFor="salery" className="form-label">
               SALARY
@@ -147,7 +137,6 @@ function CreateIntern() {
             />
           </div>
 
-          
           <div className="button-wrapper">
             <button type="submit" className="submit-btn">
               SUBMIT
